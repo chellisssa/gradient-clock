@@ -1,0 +1,73 @@
+html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+body {
+  max-height: 100vh;
+
+  background-image: radial-gradient(circle, #845ec2, #0085e4, #00a2e5, #00b9cc, #00c9a7);
+  background-size: cover;
+}
+
+.clock {
+  position: relative;
+
+  width: 300px;
+  height: 300px;
+  margin: 150px auto;
+  padding: 5px;
+  border: 20px solid white;
+  border-radius: 50%;
+  -webkit-box-shadow: 3px 3px 33px -1px rgba(207,93,207,0.83);
+  -moz-box-shadow: 3px 3px 33px -1px rgba(207,93,207,0.83);
+  box-shadow: 3px 3px 33px -1px rgba(207,93,207,0.83);
+}
+
+.clock-face {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform: translateY(-3px);
+}
+
+.hand {
+  position: absolute;
+  top: 50%;
+
+  width: 50%;
+  height: 6px;
+  border-radius: 3px;
+  background: #FBEAFF;
+
+  transform-origin: 100%;
+  transform: rotate(90deg);
+  transition: all 0.05s;
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.13, 0.38);
+}
+
+.sec-hand {
+  left: -5%;
+
+  width: 55%;
+  height: 3px;
+}
+
+.hour-hand {
+  width: 35%;
+  left: 15%;
+}
+
+.center {
+  position: absolute;
+  top: 48%;
+  left: 47%;
+  z-index: 0;
+
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+
+  background:#FBEAFF;
+}
